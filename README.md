@@ -46,8 +46,8 @@
 ### 1. 克隆项目
 
 ```bash
-git clone <your-repo-url>
-cd geminibusiness
+git clone https://github.com/qxd-ljy/Gemini-Link-System.git
+cd gGemini-Link-System
 ```
 
 ### 2. 安装依赖
@@ -129,7 +129,7 @@ ACCOUNT2_NAME=account-2
 
 ```env
 # 代理设置（可选）
-PROXY=http://proxy.example.com:8080
+PROXY=http://proxy.example.com:7890
 
 # 请求超时时间（秒，默认 600）
 TIMEOUT_SECONDS=600
@@ -337,6 +337,7 @@ geminibusiness/
 ## 📞 支持
 
 如有问题或建议，请提交 Issue。
+
 
 
 
