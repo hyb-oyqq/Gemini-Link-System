@@ -8,16 +8,14 @@ COPY requirements.txt .
 # 安装依赖
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 复制应用代码
-COPY main.py .
+# 先创建必要的目录
+RUN mkdir -p /app/static /app/templates /app/generated_images
 
-# 复制目录（如果存在）
-COPY --chown=root:root . .
+# 复制所有文件（会覆盖上面创建的空目录，如果源目录存在的话）
+COPY . .
 
-# 创建必要的目录（如果不存在）
-RUN mkdir -p /app/static && \
-    mkdir -p /app/templates && \
-    mkdir -p /app/generated_images
+# 确保目录存在（防止 COPY 时源目录不存在导致目录被删除）
+RUN mkdir -p /app/static /app/templates /app/generated_images
 
 # 暴露端口
 EXPOSE 5000
