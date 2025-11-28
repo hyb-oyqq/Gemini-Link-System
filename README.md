@@ -2,8 +2,7 @@
 
 一个将 Gemini Business API 转换为 OpenAI 兼容接口的网关服务，支持多账号负载均衡、API 密钥管理、图片生成和思考过程显示等功能。
 <img width="642" height="540" alt="78e0edf7-a521-483e-bfc8-2e185594ea66" src="https://github.com/user-attachments/assets/20dccf7f-6dc0-446e-b57e-d492448f979c" />
-<img width="593" height="532" alt="f49c2af4-2036-4895-a50f-b665b51cf33a" src="https://github.com/user-attachments/assets/69d44114-cac5-4e65-a52f-b01ec6333a7c" />
-<img width="622" height="484" alt="8c87f393-b3f1-4eec-8059-e040487e28ee" src="https://github.com/user-attachments/assets/566a1872-837f-43eb-a05f-6dfe8e6e885f" />
+<img width="593" height="532" alt="f49c2af4-2036-4895-a50f-b665b51cf33a" src="https://github.com/user-attachments/assets/69d44114-cac5-4e65-a52f-b01ec6333a7c" /><img width="622" height="484" alt="8c87f393-b3f1-4eec-8059-e040487e28ee" src="https://github.com/user-attachments/assets/566a1872-837f-43eb-a05f-6dfe8e6e885f" />
 <img width="1912" height="954" alt="3aabf85c-6dd8-4626-a574-001ab30003ec" src="https://github.com/user-attachments/assets/25230990-cebb-41e7-8a7f-a54f8873ad61" />
 <img width="886" height="721" alt="27eabdac-1c57-4dfb-8b98-7069524e6aa2" src="https://github.com/user-attachments/assets/4f7885b1-eb51-4414-b3a5-0c02dd4a7ee4" />
 <img width="896" height="793" alt="4f259f9d-7e80-4fdd-b342-717c9ba01524" src="https://github.com/user-attachments/assets/ef6a08c4-7191-46af-b60d-8b1d6c287f77" />
@@ -321,5 +320,6 @@ geminibusiness/
 ## 📞 支持
 
 如有问题或建议，请提交 Issue。
+
 
 
