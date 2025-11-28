@@ -1,0 +1,13 @@
+services:
+  geminibusiness:
+    build: .
+    container_name: geminibusiness
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    env_file: .env
+    volumes:
+      - ./geminibusiness.db:/app/geminibusiness.db
+      - ./generated_images:/app/generated_images
+    environment:
+      - PYTHONUNBUFFERED=1
