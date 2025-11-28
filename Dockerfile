@@ -2,28 +2,25 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# 安装系统依赖和编译工具
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    gcc
-
-# 复制依赖文件并安装
+# 复制依赖文件
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt && \
-    apt-get purge -y gcc && \
-    apt-get autoremove -y && \
-    rm -rf /var/lib/apt/lists/*
+
+# 安装依赖
+RUN pip install --no-cache-dir -r requirements.txt
 
 # 复制应用代码
-COPY . .
+COPY main.py .
 
-# 创建必要的目录
-RUN mkdir -p generated_images
+# 复制目录（如果存在）
+COPY --chown=root:root . .
 
-# 设置环境变量
-ENV PYTHONUNBUFFERED=1
+# 创建必要的目录（如果不存在）
+RUN mkdir -p /app/static && \
+    mkdir -p /app/templates && \
+    mkdir -p /app/generated_images
 
 # 暴露端口
 EXPOSE 5000
 
-# 启动应用
-CMD ["python", "-u", "main.py"]
+# 启动命令
+CMD ["python", "main.py"]
